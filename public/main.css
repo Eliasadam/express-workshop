@@ -2,146 +2,112 @@
 * Basic Resets
 ********************/
 
-body, html, div, label, p, h1, h2, h3, h4, h5, h6, form, a, input, textarea {
-	margin: 0; 
-	padding: 0; 
-	border: 0; 
-	outline: none;
+* {box-sizing: border-box;}
+h1, h3, p{
+  text-align:center;
+ 
+  }
+
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.img{
+  border: 2px solid rgb(233,171,88);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.wrapper > div {
+  border: 2px solid rgb(233,171,88);
+  border-radius: 5px;
+  background-color: rgba(233,171,88,.5);
+  padding: 1em;
+  color: #d9480f;
+}.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.cake {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  background-image: url("https://www.recipetineats.com/wp-content/uploads/2016/05/Chocolate-Fudge-Mud-Cake_1-SQ-680x681.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-size: one;
+  font-style:bold;
+  line-height: 1;
+  font-size:20px;
+  word-spacing: 1px;
+  
+}
+  
+
+.wedding-cakes { 
+  grid-column: 2/ 4;
+  grid-row: 2 / 3;
+  text-align:center;
+}
+.macarons {
+  grid-column: 1;
+  grid-row: 2 / 3;
+}
+
+.celebration-cakes {
+  grid-column: 2/4;
+  grid-row: 3;
+  text-align:center;
+}
+.meringues {
+  grid-column: 1;
+  grid-row: 3 / 4;}
+
+.footer {
+  grid-column: 1/4;
+  grid-row: 4;
+  float:left;
+}
+
+a:link {
+    color: blue; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:visited {
+    color: orange;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
 }
 
 
-body {
-	line-height: 1;
-	font-size: 88%;
-	font-family: 'Open Sans', arial, sans-serif;
-	background: #FAFAFA;
-	color: #585858;
+@media only screen and (max-resolution: 150dpi) and (max-width: 480px) {
+    /* CSS ruleset */
+  .wedding-cakes{font-size:20px;}
 }
 
-div {
-	width: 100%;
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* CSS ruleset */
+  .celebration-cakes, .wedding-cakes {
+  float: right;
+    width: 20em;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-	font-size: 100%;
-    padding: 23px 0;
-	margin: 0 15px;
-	color: #FF0040;
-	letter-spacing: 1px;
+.macarons, .meringues {
+    text-align: left;
 }
-
-h1 {
-	font-size: 32px;
-}
-
-h2 {
-	font-size: 25px;
-}
-
-main {
-	display: block;
-	width: 80%;
-	margin: 0 auto;
-}
-
-/*******************
-*  Header
-********************/
-
-
-header {
-	background: #FF0040;
-	background: -webkit-linear-gradient(#F5A9BC, #FF0040);
-	background: -o-linear-gradient(#F5A9BC, #FF0040); 
-	background: -moz-linear-gradient(#F5A9BC, #FF0040);
-	background: linear-gradient(#F5A9BC, #FF0040);
-}
-
-.title {
-	color: white;
-}
-
-.main-logo {
-	float: left;
-	width: 100px;
-	height: auto;
-}
-
-
-/*******************
-*  Enter a New Post
-********************/
-
-.entry-container {
-	margin: 20px 0 50px;
-}
-
-label {
-	width: 100%;
-}
-
-.text-wrapper {
-	width: 80%;
-}
-
-textarea {
-	width: 96%;
-	border-radius: 3px;
-	border: 1px solid #848484;
-	padding: 5px 2%;
-}
-
-button[type="submit"] {
-	background: #A5DF00;
-	background: -webkit-linear-gradient(#93C503, #ABCC4B);
-	background: -o-linear-gradient(#93C503, #ABCC4B);
-	background: -moz-linear-gradient(#93C503, #ABCC4B);
-	background: linear-gradient(#93C503, #ABCC4B);
-	border: none;
-    color: white;
-    padding: 4px 25px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    float: right;
-    margin-top: 10px;
-    border-radius: 3px;
-}
-
-/*******************
-*  Posts
-********************/
-
-hr {
-	background: #BDBDBD;
-}
-
-.thumbnail {
-	float: left;
-	width: 50px;
-	height: auto;
-	margin-left: 3px;
-	margin-top: 3px;
-}
-
-.post {
-	width: 100%;
-    border: 1px solid #848484;
-    float: left;
-    margin: 2%;
-    border-radius: 3px;
-    -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-    box-shadow: 3px 3px 3px 0px rgba(50, 50, 50, 0.4);
-    background: white;
-}
-
-.post p {
-	margin: 5px 10px;
-}
-
-@media (min-width: 600px) {
-	 .post {
-		width: 28.9%;
-	}
 }
