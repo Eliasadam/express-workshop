@@ -36,7 +36,7 @@ const express = require("express");
  const app = express();
  const formidable = require("express-formidable");
  const fs = require("fs");
-//  const parsedFile = JSON.parse(file);
+  // const parsedFile = JSON.parse("fs");
   app.use(express.static("public"));
   app.use(formidable());
 
@@ -67,11 +67,11 @@ console.log("res.field");
   });
 
  fs.readFile(__dirname + "/data/posts.json", function(error, file) {
-  //  const parsedFile=JSON.parse(file.toString());
-        // console.log(parsedFile);
-        console.log(file.toString());
+   const parsedFile=JSON.parse(file.toString());
+        console.log(parsedFile);
+        // console.log(file.toString());
       });
-  
+      
 
   app.listen(3000, function() {
     console.log("Server is listening on port 3000. Ready to accept requests!");
